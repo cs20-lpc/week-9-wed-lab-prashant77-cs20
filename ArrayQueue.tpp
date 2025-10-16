@@ -36,6 +36,7 @@ T ArrayQueue<T>::back() const {
 template <typename T>
 void ArrayQueue<T>::clear() {
     // TODO
+    this->length = 0;
 }
 
 template <typename T>
