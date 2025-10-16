@@ -1,6 +1,8 @@
 template <typename T>
 ArrayQueue<T>::ArrayQueue(int i) {
-    // TODO
+    buffer = new T[i];
+    frontIndex = backIndex = 0;
+    maxSize = i;
 }
 
 template <typename T>
