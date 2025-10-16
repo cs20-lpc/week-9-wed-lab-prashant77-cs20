@@ -1,8 +1,9 @@
 template <typename T>
 ArrayQueue<T>::ArrayQueue(int i) {
     buffer = new T[i];
-    frontIndex = backIndex = 0;
+    frontIndex  = 0;
     maxSize = i;
+    backIndex = maxSize -1;
 }
 
 template <typename T>
@@ -27,6 +28,9 @@ ArrayQueue<T>::~ArrayQueue() {
 template <typename T>
 T ArrayQueue<T>::back() const {
     // TODO
+    if (isEmpty())
+        throw string("error");
+    return buffer[backIndex];
 }
 
 template <typename T>
